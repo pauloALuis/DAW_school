@@ -1,0 +1,94 @@
+* {box-sizing: border-box;}
+
+.log{
+    color: white;
+
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    cursor: pointer;
+}
+
+
+
+/****************************************************************************************************************/
+/****************************/
+
+
+/*Trigger Button*/
+.login-trigger {
+    font-weight: bold;
+    color: #fff;
+    background: #343a40;
+    padding: 15px 30px;
+    border-radius: 30px;
+    right: 15px;
+    float: right;
+    padding-top: 30px;
+    padding-right: 60px;
+
+
+}
+
+/*Modal*/
+h4 {
+    font-weight: bold;
+    color: #fff;
+}
+.close {
+    color: #fff;
+    transform: scale(1.2);
+}
+.modal-content {
+    font-weight: bold;
+    background: #343a40;
+}
+.form-control {
+    margin: 1em 0;
+}
+.form-control:hover,
+.form-control:focus {
+    box-shadow: none;
+    border-color: #228b22;
+}
+.username,
+.password {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #eee;
+    padding-left: 0;
+    font-weight: normal;
+    background: transparent;
+}
+.form-control::-webkit-input-placeholder {
+    color: #228b22;
+}
+.form-control:focus::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #228b22;
+}
+.login {
+    padding: 6px 20px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #fab87f;
+    color: #fab87f;
+    font-weight: bold;
+    transition: all 0.5s;
+    margin-top: 1em;
+    right: 150px;
+
+}
+.login:hover {
+    background: #fab87f;
+    color: #228b22;
+}
+
+
+
+
+
+
+
+

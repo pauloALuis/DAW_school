@@ -1,0 +1,456 @@
+
+#idNamePageR{
+
+    font-size: 200%;
+
+}
+
+
+.rating-star {
+    height: 200px;
+    position: relative;
+    width: 200px;
+}
+
+.rating-star .rating-corners-one {
+    background: #082532;
+    border-radius: 5px;
+    height: 200px;
+    position: absolute;
+    -webkit-transform: rotate(22.5deg);
+    transform: rotate(22.5deg);
+    width: 200px;
+}
+
+.rating-star .rating-corners-two {
+    background: #082532;
+    border-radius: 5px;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: rotate(-22.5deg);
+    transform: rotate(-22.5deg);
+    width: 200px;
+}
+
+.rating-star .rating {
+    background: #125774;
+    border-radius: 190px;
+    border: 6px solid #1f99cd;
+    color: #ffffff;
+    font-size: 76px;
+    font-weight: bold;
+    height: 190px;
+    left: 50%;
+    line-height: 185px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 190px;
+    z-index: 1;
+}
+
+.rating-star.zero .rating:before {
+    content: "0.0";
+}
+
+.rating-star.zero.half .rating:before {
+    content: "0.5";
+}
+
+.rating-star.one .rating:before {
+    content: "1.0";
+}
+
+.rating-star.one.half .rating:before {
+    content: "1.5";
+}
+
+.rating-star.two .rating:before {
+    content: "2.0";
+}
+
+.rating-star.two.half .rating:before {
+    content: "2.5";
+}
+
+.rating-star.three .rating:before {
+    content: "3.0";
+}
+
+.rating-star.three.half .rating:before {
+    content: "3.5";
+}
+
+.rating-star.four .rating:before {
+    content: "4.0";
+}
+
+.rating-star.four.half .rating:before {
+    content: "4.5";
+}
+
+.rating-star.five .rating:before {
+    content: "5.0";
+}
+
+.rating-star.five.half .rating:before {
+    content: "5.5";
+}
+
+.rating-star.six .rating:before {
+    content: "6.0";
+}
+
+.rating-star.six.half .rating:before {
+    content: "6.5";
+}
+
+.rating-star.seven .rating:before {
+    content: "7.0";
+}
+
+.rating-star.seven.half .rating:before {
+    content: "7.5";
+}
+
+.rating-star.eight .rating:before {
+    content: "8.0";
+}
+
+.rating-star .corner {
+    border-radius: 5px;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+.rating-star .corner:before {
+    content: "";
+    height: 100px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 100px;
+}
+
+.rating-star .corner.one {
+    top: 0;
+    right: 0;
+}
+
+.rating-star .corner.one:before {
+    right: 0;
+    top: -70.71067812px;
+}
+
+.rating-star .corner.two {
+    top: 0;
+    right: 0;
+}
+
+.rating-star .corner.two:before {
+    right: 0;
+    top: -70.71067812px;
+}
+
+.rating-star .corner.three {
+    bottom: 0;
+    right: 0;
+}
+
+.rating-star .corner.three:before {
+    right: -70.71067812px;
+    top: 0;
+}
+
+.rating-star .corner.four {
+    bottom: 0;
+    right: 0;
+}
+
+.rating-star .corner.four:before {
+    right: -70.71067812px;
+    top: 0;
+}
+
+.rating-star .corner.five {
+    bottom: 0;
+    left: 0;
+}
+
+.rating-star .corner.five:before {
+    right: 0;
+    top: 70.71067812px;
+}
+
+.rating-star .corner.six {
+    bottom: 0;
+    left: 0;
+}
+
+.rating-star .corner.six:before {
+    right: 0;
+    top: 70.71067812px;
+}
+
+.rating-star .corner.seven {
+    top: 0;
+    left: 0;
+}
+
+.rating-star .corner.seven:before {
+    right: 70.71067812px;
+    top: 0;
+}
+
+.rating-star .corner.eight {
+    top: 0;
+    left: 0;
+}
+
+.rating-star .corner.eight:before {
+    right: 70.71067812px;
+    top: 0;
+}
+
+.rating-star.zero.half .rating-corners-two .corner.one:before {
+    background: #1f99cd;
+}
+
+.rating-star.one .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.one.half .rating-corners-one .corner.two:before {
+    background: #1f99cd;
+}
+
+.rating-star.two .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.two .rating-corners-one .corner.two {
+    background: #1f99cd;
+}
+
+.rating-star.two.half .rating-corners-two .corner.three:before {
+    background: #1f99cd;
+}
+
+.rating-star.three .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.three .rating-corners-one .corner.two {
+    background: #1f99cd;
+}
+
+.rating-star.three .rating-corners-two .corner.three {
+    background: #1f99cd;
+}
+
+.rating-star.three.half .rating-corners-one .corner.four:before {
+    background: #1f99cd;
+}
+
+.rating-star.four .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.four .rating-corners-one .corner.two {
+    background: #1f99cd;
+}
+
+.rating-star.four .rating-corners-two .corner.three {
+    background: #1f99cd;
+}
+
+.rating-star.four .rating-corners-one .corner.four {
+    background: #1f99cd;
+}
+
+.rating-star.four.half .rating-corners-two .corner.five:before {
+    background: #1f99cd;
+}
+
+.rating-star.five .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.five .rating-corners-one .corner.two {
+    background: #1f99cd;
+}
+
+.rating-star.five .rating-corners-two .corner.three {
+    background: #1f99cd;
+}
+
+.rating-star.five .rating-corners-one .corner.four {
+    background: #1f99cd;
+}
+
+.rating-star.five .rating-corners-two .corner.five {
+    background: #1f99cd;
+}
+
+.rating-star.five.half .rating-corners-one .corner.six:before {
+    background: #1f99cd;
+}
+
+.rating-star.six .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.six .rating-corners-one .corner.two {
+    background: #1f99cd;
+}
+
+.rating-star.six .rating-corners-two .corner.three {
+    background: #1f99cd;
+}
+
+.rating-star.six .rating-corners-one .corner.four {
+    background: #1f99cd;
+}
+
+.rating-star.six .rating-corners-two .corner.five {
+    background: #1f99cd;
+}
+
+.rating-star.six .rating-corners-one .corner.six {
+    background: #1f99cd;
+}
+
+.rating-star.six.half .rating-corners-two .corner.seven:before {
+    background: #1f99cd;
+}
+
+.rating-star.seven .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.seven .rating-corners-one .corner.two {
+    background: #1f99cd;
+}
+
+.rating-star.seven .rating-corners-two .corner.three {
+    background: #1f99cd;
+}
+
+.rating-star.seven .rating-corners-one .corner.four {
+    background: #1f99cd;
+}
+
+.rating-star.seven .rating-corners-two .corner.five {
+    background: #1f99cd;
+}
+
+.rating-star.seven .rating-corners-one .corner.six {
+    background: #1f99cd;
+}
+
+.rating-star.seven .rating-corners-two .corner.seven {
+    background: #1f99cd;
+}
+
+.rating-star.seven.half .rating-corners-one .corner.eight:before {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-two .corner.one {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-one .corner.two {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-two .corner.three {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-one .corner.four {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-two .corner.five {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-one .corner.six {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-two .corner.seven {
+    background: #1f99cd;
+}
+
+.rating-star.eight .rating-corners-one .corner.eight {
+    background: #1f99cd;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'),
+    url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'),
+    url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    background: white;
+    padding: 5px;
+}
+
+body #wrapper {
+    text-align: center;
+    max-width: 1000px;
+    padding: 5px 0;
+    margin: 0px;
+
+}
+
+body .rating-star {
+    display: inline-block;
+    margin: 100px 66.66666667px 0 66.66666667px;
+}
+
+
+.starAnimal{
+    margin: 5px;
+    padding: 0px;
+
+}
+
+/*****responsivo *****/
+.right {
+    float:right;
+    width:800px;
+    padding:5px;
+    margin-top:7px;
+    text-align:center;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+   .main, .right {
+        width:100%;
+    }
+}
+
+
