@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registar-se</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- icon fontawesome pata de ção -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <!--   **********************************************************************************************    -->
+    <!--   LINK JQUERY    -->
+    <!--   **********************************************************************************************    -->
+    <!--    carregar jQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--   **********************************************************************************************    -->
+
+
+    <!-- Acesso ficheiro css "bootstrap.css" -->
+    <link rel="stylesheet" type="text/css" href="_css/styles.css">
+    <link rel="stylesheet" type="text/css" href="_css/objectos.css">
+    <link rel="stylesheet" type="text/css" href="_css/stylesRegister.css">
+    <!--    Alerta notificação-->
+    <link rel="stylesheet" type="text/css" href="_css/styleNotifily.css">
+
+
+
+    <script language="JavaScript" src="_javaScript/notifilyConfir.js"> </script>
+</head>
+<body>
+
+<div class="header">
+    <button id="backHome" class="goBack"> <i  id="backHomeI"  class='fas'>&#xf104;</i> VOLTAR </button>
+</div>
+<div class="topnav">
+    <a href="register.html" class='fas'>&#xf1b0; CRIAR CONTA</a>
+</div>
+<div class="middleMain">
+    <h2>Registar-se</h2>
+
+    <div class="container">
+        <form action="/action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname" id="name">NOME COMPLETO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="Nome Completo" placeholder="Nome completo..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="dtNasc" id="fDtNasc">DATA DE NASCIMENTO:&nbsp;&nbsp;&nbsp;</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="dtNasc" name="date of birth" placeholder="+351 996 XXX XXX">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="tlm" id="fTlm">TELEMÓVEL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                </div>
+                <div class="col-75">
+                    <input type="tel" id="tlm" name="mobile phone" placeholder="+351 996 XXX XXX">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email" id="fEmail">EMAIL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="email" name="Email" placeholder="exemplo@gmmail.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="nameUser" id="fNameUser">NOME DE UTILIZADOR:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="nameUser" name="User name" placeholder="exemplo1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="passWord" id="fPassWord">PALAVRA-PASSE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" id="passWord" name="passWord" placeholder="xxxxxxx">
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" value="GRAVAR" id="fGravar" class="alertaGravado"> GRAVAR</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="footerD">
+    <p>© 2020 Copyright by Paulo Luis nº17359</p>
+</div>
+</body>
+</html>

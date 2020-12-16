@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Add icon library -->
+
+    <!-- ACESSO _css -->
+    <link rel="stylesheet" type="text/css" href="_css/styles.css">
+    <link rel="stylesheet" type="text/css" href="_css/objectos.css">
+    <link rel="stylesheet" type="text/css" href="_css/styleLogin.css">
+
+    <!--   **********************************************************************************************    -->
+    <!--   LINK JQUERY    -->
+    <!--   **********************************************************************************************    -->
+    <!--    carregar jQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--   **********************************************************************************************    -->
+
+
+    <!--code at fontawesome.com -fas fa-dog-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ACESSO _css -->
+    <link rel="stylesheet" type="text/css" href="_css/styles.css">
+    <link rel="stylesheet" type="text/css" href="_css/objectos.css">
+    <link rel="stylesheet" type="text/css" href="_css/styleLogin.css">
+    <link rel="stylesheet" type="text/css" href="_bootStraps/bootstrapNavBar.css">
+
+
+    <!--    Acesspo ficheiro navBar CSS-->
+    <link rel="stylesheet" type="text/css" href="_bootStraps/bootstrapNavBar.css">
+
+    <!--code at fontawesome.com -fas fa-dog-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- load methods and function JAVASCRIPT -->
+    <script language="JavaScript" src="_javaScript/auxiliaryMethods.js"> </script>
+    <!-- load methods and function JAVASCRIPT -->
+    <script language="JavaScript" src="_javaScript/loadcarousel.js"> </script>
+    <!-- load methods and function JAVASCRIPT -->
+    <script language="JavaScript" src="_javaScript/login.js"> </script>
+
+    <title>Página Inicial</title>
+</head>
+<body id="loadHome" >
+
+
+<!--*********************carrossel DE IMAGENS ***************************-->
+<div id="carrossel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100"  alt="Primeiro Slide" id="srcSlideOne" >
+                <div class="carousel-caption .d-block">
+                    <h5 id="hSlideOne"></h5>
+                    <p1 id="pSlideOne"></p1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"  alt="Segundo Slide"  id="srcSlideTwo" >
+                <div class="carousel-caption .d-block">
+                    <h5 id="hSlideTwo">  </h5>
+                    <p1 id="pSlideTwo"> </p1>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img class="d-block w-100"  alt="Terceiro Slide" id="srcSlideThree" >
+                <div class="carousel-caption .d-block">
+                    <h5 id="hSlideThree"></h5>
+                    <p1 id="pSlideThree"></p1>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img class="d-block w-100"  alt="Quarto Slide" id="srcSlideFour" >
+                <div class="carousel-caption .d-block">
+                    <h5 id="hSlideFour"></h5>
+                    <p1 id="pSlideFour"></p1>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+
+</div>
+
+<!--********************    MENU NAVEGAÇÃO ***************************-->
+<div class="topnav" id="myTopnav">
+    <a class="navbar-brand act" href="#"> <i class='fas'>&#xf1b0;</i></a>   <!--  ICON DOG  -->
+    <a class="active act" href="home.html">HOME</a>
+    <a class="act" href="perfilAnimal.html">ADOTAR</a>
+    <a class="act" href="classificacaoAnimal.html">CLASSIFICAÇÃO</a>
+    <a href="#" class="loginPopUP">
+        <!--********************* LOGIN DO UTILIZADOR ***************************-->
+        <!--Trigger-->
+        <a id="loginName" class="login-trigger  fas" href="#" data-target="#login" data-toggle="modal">&#xf406;</a>
+
+        <div id="login" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button data-dismiss="modal" class="close">&times;</button>
+                        <h4>Login</h4>
+                        <form>
+                            <input type="text" name="username"  id="inputEmail" class="username form-control" placeholder="Username"/>
+                            <input type="password" name="password" id="inputPassword1" class="password form-control" placeholder="password"/>
+                            <a type="text/html" href="register.html">Registar-se</a>
+                            <input class="btn login" type="button" id="validateLogin" value="Entrar"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="javascript:void(0);" class="icon" id="myResponsive">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+
+<!--/*****foooter *****/-->
+<div class="container-fluid">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright by Paulo Luis nº17359 & César Damásio nº17177   </a>
+            <p id="dataLocal"></p>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

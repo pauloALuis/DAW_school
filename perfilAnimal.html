@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Animal</title>
+
+
+    <!-- Acesso ficheiro css "bootstrap.css" -->
+    <link rel="stylesheet" type="text/css" href="_css/styles.css">
+    <link rel="stylesheet" type="text/css" href="_css/objectos.css">
+    <link rel="stylesheet" type="text/css" href="_css/bootStrapPerfilAnimal.css">
+
+    <!--   **********************************************************************************************    -->
+    <!--   LINK JQUERY    -->
+    <!--   **********************************************************************************************    -->
+    <!--    carregar jQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--   **********************************************************************************************    -->
+
+    <!-- load methods and function JAVASCRIPT -->
+    <script language="JavaScript" src="_javaScript/loadProfileAnimal.js"></script>
+
+    <!--ESTRELA CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- load methods and function JAVASCRIPT -->
+    <script language="JavaScript" src="_javaScript/auxiliaryMethods.js"></script>
+    <script language="JavaScript" src="_javaScript/saveFavAnimal.js"></script>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- icon fontawesome pata de ção -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+<!--    alerta com popUP-->
+    <script language="JavaScript" src="_javaScript/notifilyConfir.js"> </script>
+    <!--    alerta com popUP-->
+    <link rel="stylesheet" type="text/css" href="_css/styleNotifily.css">
+
+
+    <script type="application/javascript" defer src="ee.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+
+
+</head>
+<body onload=" randoAnimal(0)">
+
+<div class="header">
+    <button id="backHome" class="backOne"> <i  id="backHomeI"  class='fas'>&#xf104;</i> VOLTAR </button>
+</div>
+
+<div class="topnav" id="myTopnav">
+    <a href="perfilAnimal.html"  id="idNamePage"> Perfil do Animal </a>   <!--  ICON DOG  -->
+
+</div>
+
+<!--<h1 id="idNamePage"> Perfil do Animal</h1>-->
+<header >
+    <div class="container">
+
+
+
+            <div class="container">
+
+                <form action="action_page.php">
+                    <div class="row">
+
+                        <div class="col-25">
+
+                                <img   class="picProfAnimal" id="picProfAnimal" src="_images/icons8-usuário-masculino-26.png" >
+
+                            </div>
+                        <h1 id="nameAnimal" >Havanese</h1>
+
+                        <button type="button"  id="newAnimal" >Proximo ANIMAL</button>
+
+
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-25">
+
+                            <label id="labDtnasc" for="divDataNascimento">Data de Nascimento &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                        </div>
+
+                        <div class="col-75">
+
+                            <div type="text" id="divDataNascimento" name="firstname">
+                                17 - 20 anos
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label id="labRaca" for="divRaca">Raça: </label>
+                        </div>
+                        <div class="col-75">
+                            <div type="text" id="divRaca" name="lastname" >Pitbull Frances</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label id="labGenero" for="divGenero">Genêro: </label>
+                        </div>
+                        <div class="col-75">
+                            <div type="text" id="divGenero" name="lastname" >Cão</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label id="labSubject" for="subject">Detalhes sobre o animal :</label>
+                        </div>
+                        <div class="col-75">
+                            <div id="subject" name="subject"  style="height:200px">Energetic, Alert, Loyal, Intelligent, Attentive, Protective - Guarding, Drafting, Police work.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a></a>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+
+    </div>
+    <div class="row1">
+<!--        <input type="submit" value="adotar" id="adotar" >-->
+    <button type="button"  id="adotar" class="sendEMailAdotar">ADOTAR </button>
+
+    </div>
+</header>
+<div class="footerD">
+    <p>© 2020 Copyright by Paulo Luis nº17359</p>
+</div>
+</body>
+</html>

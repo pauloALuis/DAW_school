@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rating</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, shrink-to-fit=no">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--   **********************************************************************************************    -->
+             <!--                             LINK CSS EXTERNO                                        -->
+    <!--   **********************************************************************************************    -->
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add icon library -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--ESTRELA CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens style='font-size:23px'-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--   **********************************************************************************************    -->
+    <!--   LINK JQUERY    -->
+    <!--   **********************************************************************************************    -->
+    <!--    carregar jQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--   **********************************************************************************************    -->
+
+
+
+
+
+    <!--   **********************************************************************************************    -->
+                                      <!--   LINK CSS INTERNO    -->
+    <!--   **********************************************************************************************    -->
+    <!-- Acesso ficheiro css "bootstrap.css" -->
+    <link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+
+    <!-- Acesso ficheiro css "styles.css" -->
+    <link rel="stylesheet" type="text/css" href="_css/styles.css">
+
+    <!-- Acesso ficheiro css "objectos.css" -->
+    <link rel="stylesheet" type="text/css" href="_css/objectos.css">
+
+    <!-- Acesso ficheiro css "stylesStar.css" -->
+    <link rel="stylesheet" type="text/css" href="_css/stylesStar.css">
+
+
+
+    <!--   **********************************************************************************************    -->
+                                     <!--   LINK JAVAsCRIPT    -->
+    <!--   **********************************************************************************************    -->
+    <!--    ler os componentes do grafico  em gstatic-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
+    <!--    Ler a fonte de dados do grafico-->
+    <script type="text/javascript" src="_javaScript/DataSet.js"> </script>
+    <!-- carrega os dados do animal para o grafico-->
+    <script language="JavaScript" src="_javaScript/loadStar.js"> </script>
+
+
+
+
+    <!-- link elementos VEUS-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+
+    <script type="application/javascript" defer src="_javaScript/Veus.js"></script>
+
+</head>
+<header>
+    <button id="backHistory" > <i  id="backHomeI"  class='fas'>&#xf104;</i> VOLTAR
+    </button>
+    <div class="topnav" id="myTopnav">
+        <a href="classificacaoAnimal.html"  id="idNamePageR"class='fas'> &#xf1b0;CLASSIFICAÇÃO   </a>
+
+    </div>
+</header>
+<body onload="">
+
+<div id="corpo">
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-card>
+
+                    <v-container>
+                        <v-layout align-center justify-center>
+                            <v-btn color="blue" dark large @click="getImages" >
+                                <v-icon>refresh</v-icon> &nbsp; Mais Cães
+                            </v-btn>
+                        </v-layout>
+                    </v-container>
+                    <v-container grid-list-sm fluid>
+                        <v-layout row wrap>
+                            <!-- for loop through the results from the API -->
+                            <v-flex
+                                    v-for="n in images"
+                                    :§="n.id"
+                                    xs4
+                                    d-flex>
+                                <v-layout>
+                                    <v-flex>
+                                        <v-card >
+                                            <v-img
+                                                    :src="n.url"
+                                                    lazy-src="https://picsum.photos/10/6"
+                                                    height="400px"
+                                                    contain
+                                            >
+                                            </v-img>
+
+                                            <v-card-actions>
+                                                <v-btn @click="favouriteImage(n.id)" flat dark color="green">FAVORITO </v-btn>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-flex>
+                                </v-layout>
+                            </v-flex>
+                        </v-layout>
+
+                        <v-alert v-show="error_message"
+                                 :value="true"
+                                 type="error"
+                        >
+                            {{error_message}}
+                        </v-alert>
+
+                        <v-card-title>
+                            <h2>Mostrar Mais Adorados</h2>
+                        </v-card-title>
+                        <v-layout row wrap>
+                            <!-- for loop through the results from the API -->
+                            <v-flex
+                                    v-for="n in favourites"
+                                    :§="n.id"
+                                    xs4
+                                    d-flex>
+                                <v-layout>
+                                    <v-flex>
+                                        <v-card>
+                                            <v-img
+                                                    :src="n.image.url"
+                                                    height="200px"
+                                                    contain
+                                            ></v-img>
+
+                                            <v-card-title primary-title>
+                                                <div>
+                                                    <div>ID da Fav: {{ n.id }}</div>
+                                                    <div>ID da Imagem: {{n.image.id}}</div>
+                                                    <div>ID do Suj: {{ n.sub_id }}</div>
+                                                    <div>Criado a: {{ new Date(n.created_at).toLocaleString() }} </div><!-- convert timezone date/time to nice string-->
+                                                </div>
+                                            </v-card-title>
+
+                                            <v-card-actions>
+                                                <v-btn flat dark  @click="deleteFavouriteImage(n.id)"  color="red">Dislike </v-btn>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-flex>
+                                </v-layout>
+                            </v-flex>
+                        </v-layout>
+                        <br>
+                        <!-- Pagination control -->
+                        <v-layout  wrap align-center>
+                            <v-flex xs11>
+
+                                <v-card-title primary-title>
+                                    <div>Pagina</div>
+                                </v-card-title>
+                                <v-pagination xs9
+                                              v-model="page"
+                                              :length="getNumPages"
+                                ></v-pagination>
+                            </v-flex>
+                        </v-layout>
+
+                    </v-container>
+                </v-card>
+            </v-content>
+        </v-app>
+    </div>
+
+
+</div>
+
+<div class="co100">
+    <h1>RAÇA CANINA MAIS ADOTADAS</h1>
+    <div id="chart"></div>
+</div>
+
+<div class="footerD">
+    <p>© 2020 Copyright by Paulo Luis nº17359</p>
+
+</div>
+</body>
+</html>
